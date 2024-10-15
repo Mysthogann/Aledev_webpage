@@ -1,7 +1,74 @@
-<!-- About page -->
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome to My Portfolio</h1>
-<p>About page</p>
+<div class="about-section fade-in">
+    <h1 class="fade-title">Alejandro Chavarria</h1>
+    <p class="fade-title">Education and Experience</p>
+    
+    <!-- Experience Section -->
+    <h2 class="fade-title">Experience</h2>
+    <div class="timeline">
+        <!-- Internship -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">January 2024 - April 2024</span>
+            <div class="timeline-content">
+                <h3>Intern Software Developer</h3>
+                <p>UpwaySolutions SA</p>
+            </div>
+        </div>
+
+        <!-- Freelance Experience -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">May 2022 - December 2023</span>
+            <div class="timeline-content">
+                <h3>Software Developer</h3>
+                <p>Freelance</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <h2 class="fade-title">Education</h2>
+    <div class="timeline">
+        <!-- Bachelor's Degree -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">January 2021 - August 2024</span>
+            <div class="timeline-content">
+                <h3>Bachelor's in Software Engineering</h3>
+                <p>Universidad Latina de Costa Rica</p>
+                <a href="your-drive-link" target="_blank">View Certification</a>
+            </div>
+        </div>
+
+        <!-- VMware Certification -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">August 2023 - November 2023</span>
+            <div class="timeline-content">
+                <h3>VMWare Certified Technician Associate (VCTA)</h3>
+                <p>VMWare IT Academy</p>
+                <a href="https://drive.google.com/file/d/1AVhoOFGm5HWeV6lLSxaF805PIEkJV-gO/view" target="_blank">View Certification</a>
+            </div>
+        </div>
+
+        <!-- Python Certification -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">December 2022 - May 2023</span>
+            <div class="timeline-content">
+                <h3>Introduction to Programming with Python</h3>
+                <p>HarvardX</p>
+                <a href="https://drive.google.com/file/d/1yXxwBw0fcvgVL2BpKIMfZJ4t2A4uLlf5/view" target="_blank">View Certification</a>
+            </div>
+        </div>
+
+        <!-- AWS Cloud Concepts Certification -->
+        <div class="timeline-item fade-in">
+            <span class="timeline-date">August 2023 - November 2023</span>
+            <div class="timeline-content">
+                <h3>Basic Concepts of the AWS Cloud</h3>
+                <p>Universidad Latina de Costa Rica</p>
+                <a href="https://drive.google.com/file/d/1CcsbmQpmc3cwNBnANfZJuEpyJWx5lm2-/view" target="_blank">View Certification</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

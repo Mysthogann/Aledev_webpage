@@ -1,5 +1,3 @@
-# Main app (controller logic)
-
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -12,9 +10,13 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
+@app.route('/lsi')
+def lsi():
+    return render_template('lsi.html')
+
+@app.route('/project2')
+def project2():
+    return render_template('project2.html')
 
 @app.route('/contact')
 def contact():

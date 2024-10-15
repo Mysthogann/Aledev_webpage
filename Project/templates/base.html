@@ -1,71 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <script>
-        // Function to dynamically load content into the main section
-        function openPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('.content').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the page:', error));
-        }
-
-        // Function to toggle dropdown visibility with smooth transition
-        function toggleDropdown(section) {
-            const dropdown = document.getElementById(section);
-            if (dropdown.classList.contains("hidden")) {
-                dropdown.classList.remove("hidden");
-                dropdown.classList.add("visible");
-            } else {
-                dropdown.classList.remove("visible");
-                dropdown.classList.add("hidden");
-            }
-        }
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_navbar.css') }}?v=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_timeline_about.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_fade.css') }}">
+    </head>    
 <body>
     <div class="navbar_container">
         <nav class="sidebar">
             <!-- First block for main links -->
             <div class="main-links">
                 <ul>
-                    <li><a href="#" onclick="openPage('home.html')"><img src="{{ url_for('static', filename='img/home-icon.png') }}" alt="Home"></a></li>
-                    <li><a href="#" onclick="openPage('about.html')">About</a></li>
-                    <li><a href="/cv.pdf" target="_blank">CV</a></li>
+                    <li><a href="{{ url_for('home') }}">
+                        <img src="{{ url_for('static', filename='img/amagno.png') }}" alt="Home" style="width: 150px; height: auto; margin-top: -20px;">
+                    </a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LxU5tip5FLF6RCzSX8JDhfIFzgS0vDyl/view" target="_blank">CV</a></li>
                     <li><a href="https://github.com/mysthogann" target="_blank">GitHub</a></li>
                 </ul>
             </div>
-
+            <hr>
             <!-- Second block for Projects Dropdown -->
             <div class="projects-section">
-                <hr>
-                <h3 onclick="toggleDropdown('projects-dropdown')" style="cursor: pointer;">Projects</h3>
-                <ul id="projects-dropdown" class="hidden">
-                    <li><a href="#" onclick="openPage('project1.html')">Project 1</a></li>
-                    <li><a href="#" onclick="openPage('project2.html')">Project 2</a></li>
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="{{ url_for('lsi') }}">Liceo San Isidro</a></li>
                 </ul>
             </div>
-
+            <hr>
             <!-- Third block for Contact Dropdown -->
             <div class="contact-section">
-                <hr>
-                <h3 onclick="toggleDropdown('contact-dropdown')" style="cursor: pointer;">Contact</h3>
-                <ul id="contact-dropdown" class="hidden">
+                <h3>Contact</h3>
+                <ul>
                     <li><a href="mailto:chvbale15@gmail.com">Email</a></li>
                     <li><a href="https://linkedin.com/in/alejandrochavarriaba/?locale=en_US" target="_blank">LinkedIn</a></li>
                 </ul>
             </div>
         </nav>
         <main class="content">
-            <!-- This is where the loaded content will be inserted -->
-            <h1>Welcome to My Portfolio</h1>
-            <p>Select a section to view more details.</p>
+            <!-- This is where the Flask content will be inserted -->
+            {% block content %}
+            {% endblock %}
         </main>
     </div>
     <footer>

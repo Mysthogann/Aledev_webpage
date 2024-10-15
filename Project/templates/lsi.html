@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="project-container">
+    <h1>Liceo San Isidro</h1>
+    <img src="{{ url_for('static', filename='img/liceosanisidro.png') }}" alt="Liceo San Isidro" 
+        style="width: 100%; max-width 100%; height: auto; display: block; margin: 20px auto;">
+    <p style="margin-top: 20px;">
+        This project showcases the Liceo San Isidro, featuring details and images of the educational institution.
+    </p>
+</div>
+{% endblock %}

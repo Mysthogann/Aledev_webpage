@@ -21,21 +21,28 @@ body {
 }
 
 .sidebar {
-    width: 250px;
-    background-color: #fafafa; /* Light background */
+    width: 240px;
+    background-color: #fafafa;
     color: #333333;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border-right: 1px solid #e6e6e6; /* Subtle, lighter border */
+    border-right: 1px solid #e6e6e6;
+    min-height: 100vh; /* Ensure it fills the full viewport height */
+    flex-shrink: 0;
 }
 
+
 .main-links,
-.projects-section,
 .contact-section {
+    margin-bottom: 20px; /* Increased space between sections */
+    margin-top: 10px;
+}
+
+.projects-section {
+    margin-top: 10px; /* Increased space between sections */
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .main-links ul,
@@ -67,34 +74,37 @@ body {
     transition: color 0.3s;
 }
 
-/* Projects and Contact Headers (Smooth and Same Size as Above) */
+/* Projects and Contact Headers: Uppercase, lighter, and more spaced */
 .projects-section h3,
 .contact-section h3 {
-    font-weight: 500;
-    font-size: 1.3em;
-    color: #333333;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    font-size: 1.1em; /* Slightly smaller than the main links */
+    color: #999999; /* Lighter gray for section headers */
+    letter-spacing: 0.22em; /* More spacing for uppercase effect */
+    text-transform: uppercase; /* Uppercase style */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     cursor: pointer;
+    margin-bottom: 10px; /* Separate title from dropdown content */
+    font-weight: 500;
 }
 
 .projects-section:hover h3,
 .contact-section:hover h3 {
-    color: #555555;
+    color: #777777; /* Slightly lighter on hover */
     transition: color 0.3s;
 }
 
-/* Dropdown Lists: More padding and smoother appearance */
+/* Dropdown Lists: More padding for dropdown title, less space between options */
 .projects-section ul li a,
 .contact-section ul li a {
     color: #333333;
     text-decoration: none;
     display: block;
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1.09em; /* Slightly smaller */
+    font-weight: 300;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 0.05em;
-    padding: 12px 0; /* Added more padding for more breathing room */
+    padding: 8px 0 8px 10px; /* Reduced spacing between dropdown items */
 }
 
 .projects-section ul li a:hover,
@@ -109,13 +119,13 @@ body {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
 .projects-section:hover ul,
 .contact-section:hover ul {
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
     transform: translateY(0);
 }
@@ -142,4 +152,9 @@ footer {
     width: 100%;
     border-top: 1px solid #e6e6e6; /* Lighter border */
     margin-top: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

@@ -1,0 +1,29 @@
+/* General fade-in effect for headings and paragraphs */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the gradient fade effect on h1, h2, and the paragraph under those */
+.fade-title {
+    display: block; /* Ensure the titles appear on separate lines */
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.8), rgba(0, 0, 0, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Optional: You can also add margin to the bottom of the title to improve spacing */
+.fade-title + p {
+    margin-top: 10px; /* Space between title and subtitle */
+    margin-bottom: 30px; /* Space between subtitle and next section */
+}
