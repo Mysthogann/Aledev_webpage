@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f8f8; /* Slightly darker than the navbar and footer */
+}
+
+.navbar_container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fafafa; /* Light background */
+    color: #333333;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid #e6e6e6; /* Subtle, lighter border */
+}
+
+.main-links,
+.projects-section,
+.contact-section {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.main-links ul,
+.projects-section ul,
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-links ul li,
+.projects-section ul li,
+.contact-section ul li {
+    margin-bottom: 20px;
+}
+
+/* Main Links (About, CV, GitHub) */
+.main-links ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.main-links ul li a:hover {
+    color: #555555;
+    transition: color 0.3s;
+}
+
+/* Projects and Contact Headers (Smooth and Same Size as Above) */
+.projects-section h3,
+.contact-section h3 {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #333333;
+    letter-spacing: 0.05em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.projects-section:hover h3,
+.contact-section:hover h3 {
+    color: #555555;
+    transition: color 0.3s;
+}
+
+/* Dropdown Lists: More padding and smoother appearance */
+.projects-section ul li a,
+.contact-section ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.05em;
+    padding: 12px 0; /* Added more padding for more breathing room */
+}
+
+.projects-section ul li a:hover,
+.contact-section ul li a:hover {
+    color: #555555;
+    transition: color 0.3s;
+}
+
+/* Hover-based Dropdown */
+.projects-section ul,
+.contact-section ul {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects-section:hover ul,
+.contact-section:hover ul {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sidebar hr {
+    border: 1px solid #e6e6e6; /* Softer and lighter border */
+    margin: 0px -50px 20px -50px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9; /* Slightly darker than sidebar, but still light */
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #f9f9f9; /* Match with content area for harmony */
+    color: #333333;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e6e6e6; /* Lighter border */
+    margin-top: auto;
+}
