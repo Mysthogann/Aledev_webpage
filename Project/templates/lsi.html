@@ -1,12 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="project-container">
-    <h1>Liceo San Isidro</h1>
-    <img src="{{ url_for('static', filename='img/liceosanisidro.png') }}" alt="Liceo San Isidro" 
-        style="width: 100%; max-width 100%; height: auto; display: block; margin: 20px auto;">
-    <p style="margin-top: 20px;">
-        This project showcases the Liceo San Isidro, featuring details and images of the educational institution.
-    </p>
-</div>
+<div class="lsi-section fade-in">
+    <!-- Clickable Image -->
+    <a href="https://liceosanisidro.org/" target="_blank">
+        <img src="{{ url_for('static', filename='img/liceosanisidro.png') }}" alt="Liceo San Isidro" >
+    </a>
+
+    <h1 class="lsi-title">Liceo San Isidro Webpage</h1>
+    <p class="lsi-subtitle">Webpage for the Liceo of San Isidro</p>
+    
+    <div class="lsi-description">
+        <p>
+            At the end of 2023, I had the task to update the webpage of Liceo San Isidro, which wasn’t looking good at all. 
+            I completely redesigned it with a new format, added new sections, and made sure it aligned with modern web standards.
+        </p>
+    </div>
+
+    <!-- Project Details -->
+    <div class="lsi-project-details">
+        <div class="lsi-detail-item">
+            <strong>Timeline</strong>
+            <p>September 2023 - November 2023</p>
+        </div>
+        <div class="lsi-detail-item">
+            <strong>Role</strong>
+            <p>Web Developer</p>
+        </div>
+        <div class="lsi-detail-item">
+            <strong>Tools</strong>
+            <p>WordPress, Elementor</p>
+        </div>
+    </div>
 {% endblock %}

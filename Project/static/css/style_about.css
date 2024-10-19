@@ -1,0 +1,117 @@
+/* Timeline for About Page */
+.timeline {
+    position: relative;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before { /* Vertical Line */
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #dcdcdc;
+    transform: translateX(-50%);
+}
+
+.timeline-item { /* Timeline Entry */
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.timeline-item .timeline-content { /* Content Section */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ebebeb;
+    position: relative;
+    width: 40%;
+    text-align: left;
+    margin-right: 20px; 
+}
+
+.timeline-item .timeline-date { /* Date Section */
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1em;
+    text-align: right;
+    width: 40%;
+    margin-left: 20px; 
+}
+
+.timeline-item::before { /* Circle in the Center */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #838383;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #dcdcdc;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline-item h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.timeline-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.timeline-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        width: calc(100% - 40px);
+        padding-left: 40px;
+        float: none;
+        text-align: left;
+    }
+
+    .timeline-item .timeline-content,
+    .timeline-item .timeline-date {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+}

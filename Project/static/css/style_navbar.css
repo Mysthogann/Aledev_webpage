@@ -4,15 +4,45 @@
     box-sizing: border-box;
 }
 
+/* Apply Inter font family globally */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; /* Light weight for body text */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f8f8f8; /* Slightly darker than the navbar and footer */
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3, p {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 700; /* Bold for H1 */
+    font-size: 3em;   /* Adjust as needed */
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.gradient-text {
+    font-weight: 700;
 }
 
 .navbar_container {
@@ -29,19 +59,18 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     border-right: 1px solid #e6e6e6;
-    min-height: 100vh; /* Ensure it fills the full viewport height */
+    min-height: 100vh; 
     flex-shrink: 0;
 }
 
-
 .main-links,
 .contact-section {
-    margin-bottom: 20px; /* Increased space between sections */
+    margin-bottom: 20px;
     margin-top: 10px;
 }
 
 .projects-section {
-    margin-top: 10px; /* Increased space between sections */
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -66,7 +95,6 @@ body {
     font-size: 1.3em;
     font-weight: 500;
     letter-spacing: 0.05em;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .main-links ul li a:hover {
@@ -74,37 +102,34 @@ body {
     transition: color 0.3s;
 }
 
-/* Projects and Contact Headers: Uppercase, lighter, and more spaced */
+/* Projects and Contact Headers */
 .projects-section h3,
 .contact-section h3 {
     font-weight: 600;
-    font-size: 1.1em; /* Slightly smaller than the main links */
-    color: #999999; /* Lighter gray for section headers */
-    letter-spacing: 0.22em; /* More spacing for uppercase effect */
-    text-transform: uppercase; /* Uppercase style */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    color: #999999;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
     cursor: pointer;
-    margin-bottom: 10px; /* Separate title from dropdown content */
-    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .projects-section:hover h3,
 .contact-section:hover h3 {
-    color: #777777; /* Slightly lighter on hover */
+    color: #777777;
     transition: color 0.3s;
 }
 
-/* Dropdown Lists: More padding for dropdown title, less space between options */
+/* Dropdown Lists */
 .projects-section ul li a,
 .contact-section ul li a {
     color: #333333;
     text-decoration: none;
     display: block;
-    font-size: 1.09em; /* Slightly smaller */
+    font-size: 1.09em;
     font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 0.05em;
-    padding: 8px 0 8px 10px; /* Reduced spacing between dropdown items */
+    padding: 8px 0 8px 10px;
 }
 
 .projects-section ul li a:hover,
@@ -131,26 +156,26 @@ body {
 }
 
 .sidebar hr {
-    border: 1px solid #e6e6e6; /* Softer and lighter border */
+    border: 1px solid #e6e6e6;
     margin: 0px -50px 20px -50px;
 }
 
 .content {
     flex-grow: 1;
     padding: 20px;
-    background-color: #f9f9f9; /* Slightly darker than sidebar, but still light */
+    background-color: #f9f9f9;
     overflow-y: auto;
 }
 
 footer {
-    background-color: #f9f9f9; /* Match with content area for harmony */
+    background-color: #f9f9f9;
     color: #333333;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #e6e6e6; /* Lighter border */
+    border-top: 1px solid #e6e6e6;
     margin-top: auto;
 }
 
