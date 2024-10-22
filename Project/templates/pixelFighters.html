@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="project-section fade-in">
+    <!-- Clickable Image -->
+    <a href="{{ url_for('pixelFighters') }}">
+        <img src="{{ url_for('static', filename='img/pixelFighters_banner.png') }}" alt="Pixel Fighters">
+    </a>
+
+    <h1 class="project-title">Pixel Fighters</h1>
+    <p class="project-subtitle">2D 1v1 single-screen fighting game</p>
+
+    <div class="project-description">
+        <p>
+            Pixel Fighters is a 2D fighting game developed using Unity. The game features pixelated characters battling in single-screen, 1v1 matches.
+            It was developed during the end of 2023 as a personal project to experiment with game development and showcase Unity's capabilities for
+            creating 2D games.
+        </p>
+    </div>
+
+    <!-- Project Details -->
+    <div class="project-details">
+        <div class="project-detail-item">
+            <strong>Timeline</strong>
+            <p>September 2023 - November 2023</p>
+        </div>
+        <div class="project-detail-item">
+            <strong>Role</strong>
+            <p>Game Developer</p>
+        </div>
+        <div class="project-detail-item">
+            <strong>Tools</strong>
+            <p>Unity, C#, WebGL</p>
+        </div>
+    </div>
+
+    <!-- Play Button -->
+    <div class="project-play-now">
+        <a href="{{ url_for('playpixelFighters') }}" class="play-button">Play Pixel Fighters</a>
+    </div>
+</div>
+{% endblock %}

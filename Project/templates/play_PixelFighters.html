@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="game-play-section fade-in">
+    <h1 class="game-title">Play Pixel Fighters</h1>
+    <div class="game-container">
+        <!-- Embedded game using iframe or Unity WebGL -->
+        <iframe src="{{ url_for('static', filename='webgl_build/index.html') }}" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+{% endblock %}

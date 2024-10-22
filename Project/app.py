@@ -14,9 +14,14 @@ def about():
 def lsi():
     return render_template('lsi.html')
 
-@app.route('/project2')
-def project2():
-    return render_template('project2.html')
+@app.route('/pixelFighters')
+def pixelFighters():
+    return render_template('pixelFighters.html')
+
+@app.route('/play_pixelFighters')
+def playpixelFighters():
+    return render_template('play_pixelFighters.html')
+
 
 @app.route('/contact')
 def contact():

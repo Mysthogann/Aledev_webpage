@@ -1,5 +1,5 @@
-/* Liceo San Isidro section styling */
-.lsi-section {
+/* General project section styling */
+.project-section {
     padding: 10px;
     max-width: auto;
     margin: auto;
@@ -7,8 +7,8 @@
     align-content: center;
 }
 
-/* Title for Liceo San Isidro page */
-.lsi-title {
+/* Title for project page */
+.project-title {
     font-size: 2.8em;
     font-weight: 700;
     margin-bottom: 20px;
@@ -19,7 +19,7 @@
 }
 
 /* Subtitle below the title */
-.lsi-subtitle {
+.project-subtitle {
     font-size: 1.5em;
     font-weight: 400;
     line-height: 1.6;
@@ -28,7 +28,7 @@
 }
 
 /* Description paragraph */
-.lsi-description p {
+.project-description p {
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.8;
@@ -37,19 +37,19 @@
 }
 
 /* Project details container */
-.lsi-project-details {
+.project-details {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
 
 /* Each detail item (Timeline, Role, Tools) */
-.lsi-detail-item {
+.project-detail-item {
     width: 200px;
 }
 
 /* Title for each detail */
-.lsi-detail-item strong {
+.project-detail-item strong {
     display: block;
     font-size: 1.1em;
     font-weight: 600;
@@ -58,7 +58,7 @@
 }
 
 /* Text for each detail */
-.lsi-detail-item p {
+.project-detail-item p {
     font-size: 1.2em;
     font-weight: 400;
     color: #666666;
@@ -66,18 +66,18 @@
 }
 
 /* URL styling */
-.lsi-url {
+.project-url {
     margin-top: 30px;
     font-size: 1.2em;
 }
 
-.lsi-url a {
+.project-url a {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
 }
 
-.lsi-url a:hover {
+.project-url a:hover {
     text-decoration: underline;
 }
 
@@ -97,8 +97,7 @@
 }
 
 /* Add hover effect for the clickable image */
-.lsi-section a img:hover {
+.project-section a img:hover {
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
-

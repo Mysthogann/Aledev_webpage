@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="lsi-section fade-in">
+<div class="project-section fade-in">
     <!-- Clickable Image -->
     <a href="https://liceosanisidro.org/" target="_blank">
-        <img src="{{ url_for('static', filename='img/liceosanisidro.png') }}" alt="Liceo San Isidro" >
+        <img src="{{ url_for('static', filename='img/liceosanisidro.png') }}" alt="Liceo San Isidro">
     </a>
 
-    <h1 class="lsi-title">Liceo San Isidro Webpage</h1>
-    <p class="lsi-subtitle">Webpage for the Liceo of San Isidro</p>
+    <h1 class="project-title">Liceo San Isidro Webpage</h1>
+    <p class="project-subtitle">Webpage for the Liceo of San Isidro</p>
     
-    <div class="lsi-description">
+    <div class="project-description">
         <p>
             At the end of 2023, I had the task to update the webpage of Liceo San Isidro, which wasn’t looking good at all. 
             I completely redesigned it with a new format, added new sections, and made sure it aligned with modern web standards.
@@ -18,18 +18,19 @@
     </div>
 
     <!-- Project Details -->
-    <div class="lsi-project-details">
-        <div class="lsi-detail-item">
+    <div class="project-details">
+        <div class="project-detail-item">
             <strong>Timeline</strong>
             <p>September 2023 - November 2023</p>
         </div>
-        <div class="lsi-detail-item">
+        <div class="project-detail-item">
             <strong>Role</strong>
             <p>Web Developer</p>
         </div>
-        <div class="lsi-detail-item">
+        <div class="project-detail-item">
             <strong>Tools</strong>
             <p>WordPress, Elementor</p>
         </div>
     </div>
+</div>
 {% endblock %}
